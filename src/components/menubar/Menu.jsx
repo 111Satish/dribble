@@ -36,7 +36,7 @@ const Menu = () => {
         </div>
         <div className="menu-right">
           <button className="filter-button" onClick={toggleTagColor}>
-            <FaFilter />
+            <FaFilter style={{color:"black"}}/>
             <span>Filter</span>
           </button>
         </div>

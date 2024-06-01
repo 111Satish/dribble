@@ -4,6 +4,27 @@
     background-color: #f7f7f7;
   }
   
+  .footer-v2-marquee__track {
+    display: flex;
+    animation: marquee 60s linear infinite;
+  }
+  
+  .footer-v2-marquee__grid {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 16px;
+    animation: marquee 180s linear infinite;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%); /* Adjust based on the number of duplicated categories */
+    }
+  }
+  
   .footer-v2-marquee {
     overflow: hidden;
     margin-left: -100%;
@@ -52,8 +73,8 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust background color and opacity */
-    color: white; /* Set text color */
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white; 
   }
   
   

@@ -86,6 +86,10 @@ const CategorySlider = () => {
     },
   ];
 
+
+  const extendedCategorie = [...categories, ...categories, ...categories];
+  const extendedCategories = [...extendedCategorie, ...extendedCategorie, ...extendedCategorie];
+
   return (
     <div
       id="footer"
@@ -96,7 +100,7 @@ const CategorySlider = () => {
       <div className="footer-v2-marquee" data-footer-v2-marquee>
         <div className="footer-v2-marquee__track">
           <div className="footer-v2-marquee__grid">
-            {categories.map((category, index) => (
+            {extendedCategories.map((category, index) => (
               <a
                 key={index}
                 className="footer-v2-marquee-item"

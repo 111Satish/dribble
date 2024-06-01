@@ -1,10 +1,14 @@
 .footer-v2 {
     padding: 40px 0;
     background-color: #f7f7f7;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
   }
   
-  .footer-v2__logo {
-    margin-bottom: 20px;
+  .footer-v2__logo img {
+    width: 200px;
+    height: 80px;
   }
   
   .footer-v2__links {
@@ -28,7 +32,8 @@
   }
   
   .footer-v2__social-links {
-    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   
   .footer-v2__social-link {
@@ -41,5 +46,14 @@
   .accessibility-text {
     position: absolute;
     left: -9999px;
+  }
+  @media (max-width: 768px) {
+    .footer-v2 {
+      padding: 40px 0;
+      background-color: #f7f7f7;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
   }
   

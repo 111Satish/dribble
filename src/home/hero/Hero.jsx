@@ -2,7 +2,7 @@ import React from "react";
 import "./Hero.css";
 
 const Hero = () => {
-  const slides = [
+  const slide = [
     {
       imageUrl:
         "https://cdn.dribbble.com/uploads/47171/original/daniele-buffa-3.png?1689174763&format=webp&resize={width}x{height}&vertical=center",
@@ -61,6 +61,8 @@ const Hero = () => {
     },
   ];
 
+  const slide1 = [...slide, ...slide];
+  const slides = [...slide1, ...slide1];
   return (
     <div className="hero-slider">
       <div className="slides-container">

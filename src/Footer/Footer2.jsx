@@ -1,16 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom"; 
 import "./Footer2.css";
+import { FaTwitter, FaYoutube, FaFacebook, FaInstagram} from "react-icons/fa";
 
 const Footer2 = () => {
   return (
     <Router>
       <footer className="footer-v2">
         <Link className="footer-v2__logo" to="/"> 
-          <svg xmlns="http://www.w3.org/2000/svg" width="76" height="30" viewBox="0 0 210 59" fill="none">
-            <title>Dribbble: the community for graphic design</title>
-            <path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor"></path>
-          </svg>
+          <img src ={'./logo.png'}/>
           <span className="accessibility-text">Back to home page</span>
         </Link>
         <ul className="footer-v2__links">
@@ -25,12 +23,20 @@ const Footer2 = () => {
         </ul>
         <div className="footer-v2__social-links">
         
-          <Link to="http://twitter.com/dribbble" className="footer-v2__social-link">
-            <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="aezd2phhkjrqw3zsfw22ncu55ilq89f"
-              role="img" viewBox="0 0 24 24" className="icon ">
-              <title id="aezd2phhkjrqw3zsfw22ncu55ilq89f">Twitter icon</title>
-              <path></path>
-            </svg>
+          <Link to="http://youtube.com" className="footer-v2__social-link">
+              <FaYoutube/>
+            <span className="accessibility-text">Youtube</span>
+          </Link>
+          <Link to="http://facebook.com" className="footer-v2__social-link">
+              <FaFacebook/>
+            <span className="accessibility-text">Facebook</span>
+          </Link>
+          <Link to="http://instagram.com" className="footer-v2__social-link">
+              <FaInstagram/>
+            <span className="accessibility-text">Instagram</span>
+          </Link>
+          <Link to="http://twitter.com" className="footer-v2__social-link">
+              <FaTwitter/>
             <span className="accessibility-text">Twitter</span>
           </Link>
           
