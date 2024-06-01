@@ -1,0 +1,36 @@
+.shot-thumbnail-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .shot-thumbnail-container li {
+    flex: 1 1 calc(33.333% - 16px); 
+    box-sizing: border-box;
+  }
+  
+  @media (max-width: 1024px) {
+    .shot-thumbnail-container li {
+      flex: 1 1 calc(50% - 16px); 
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .shot-thumbnail-container li {
+      flex: 1 1 100%; 
+    }
+  }
+  
+  
+  .shot-thumbnail-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2em; 
+    margin-bottom: 20px;
+  }
+  

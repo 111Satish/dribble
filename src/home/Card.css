@@ -1,0 +1,140 @@
+.card {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  height: auto;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.card-thumbnail {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-thumbnail-placeholder img {
+  width: 100%;
+  height: auto;
+}
+
+.card-thumbnail-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  text-indent: -9999px;
+}
+
+.card-thumbnail-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.233);
+  opacity: 0;
+  transition: opacity 0.1s ease, background-color 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Aligns items to the start and end of the container */
+  height: 0;
+}
+
+.card:hover .card-thumbnail-overlay {
+  opacity: 1;
+  height: 20%;
+  background-color: rgba(0, 0, 0, 0.34);
+}
+
+.card-thumbnail-overlay-content {
+  text-align: center;
+  color: #fff;
+}
+
+.card-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  align-self: flex-start;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.card-actions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.card-action a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card-action a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+.card:hover {
+  border-color: #ff7a59;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.card-user-info {
+  display: flex;
+  align-items: center;
+}
+
+.card-user-info .hoverable {
+  display: flex;
+  align-items: center;
+}
+
+.card-user-info .photo {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.card-user-info .display-name {
+  font-weight: bold;
+}
+
+.badge-pro {
+  background-color: #ff7a59;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+.card-statistics {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-statistic {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card-statistic svg {
+  fill: currentColor;
+}

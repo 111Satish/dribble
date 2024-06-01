@@ -1,0 +1,257 @@
+:root {
+  --primary-color: #333;
+  --secondary-color: #555;
+  --link-color: #007bff;
+  --link-hover-color: #0056b3;
+  --background-color: #fff;
+  --overlay-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-v2 {
+  position: relative;
+  background-color: var(--background-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-v2__dark-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-color);
+  z-index: 10;
+}
+
+.nav-v2__dark-overlay.open {
+  display: block;
+}
+
+.nav-v2__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.nav-v2-logo {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+.nav-v2-logo img{
+  width: 200px;
+  height: 80px;
+}
+
+.nav-v2-dynamic {
+  display: flex;
+  align-items: center;
+}
+
+.nav-v2-dynamic__logged-out {
+  display: flex;
+  align-items: center;
+}
+
+.nav-v2-dynamic__actions {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.nav-v2-dynamic__link {
+  text-decoration: none;
+  color: var(--link-color);
+  margin-left: 0.5rem;
+}
+
+.nav-v2-dynamic__link:hover {
+  color: var(--link-hover-color);
+}
+
+.nav-v2-search {
+  position: relative;
+}
+
+.nav-v2-search__icon {
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--secondary-color);
+}
+
+.nav-v2-search__input {
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  outline: none;
+}
+
+.nav-v2-main {
+  display: flex;
+  align-items: center;
+}
+
+.nav-v2-main.open {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 75%;
+  max-width: 300px;
+  background-color: var(--background-color);
+  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+  z-index: 15;
+  padding-top: 2rem;
+}
+
+.nav-v2-main__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.nav-v2-main__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-v2-main__item {
+  padding: 0.5rem 1rem;
+}
+
+.nav-v2-main__item--sub-nav {
+  position: relative;
+}
+
+.nav-v2-main__item--sub-nav:hover .nav-v2-sub {
+  display: block;
+}
+
+.nav-v2-main__item--divided {
+  border-top: 1px solid var(--secondary-color);
+}
+
+.nav-v2-hide-medium-up {
+  display: none;
+}
+
+.nav-v2-main__item a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.nav-v2-main__item a:hover {
+  color: var(--link-hover-color);
+}
+
+.nav-v2-sub {
+  list-style: none;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: var(--background-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  width: 200px;
+  border-radius: 10%;
+}
+
+.nav-v2-sub__item {
+  padding: 0.5rem 1rem;
+}
+
+.nav-v2-sub__item a {
+  display: block;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.nav-v2-sub__item a:hover {
+  color: var(--link-hover-color);
+}
+
+.nav-v2-sub__item .nav-v2-sub__subtitle {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--secondary-color);
+}
+
+.nav-v2-sub__divider {
+  height: 1px;
+  background-color: var(--secondary-color);
+  margin: 0.5rem 0;
+}
+
+.nav-v2-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.nav-v2-burger span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .nav-v2-burger {
+    display: flex;
+  }
+
+  .nav-v2-main {
+    display: none;
+  }
+
+  .nav-v2-main__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-v2-main.open {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    max-width: 300px;
+  }
+
+  .nav-v2-sub {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .nav-v2-sub__item {
+    width: 100%;
+  }
+
+  .nav-v2-sub__item a {
+    text-align: center;
+  }
+
+  .nav-v2-hide-medium-up {
+    display: block;
+  }
+}
